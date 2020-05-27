@@ -11,13 +11,12 @@ try:
     for a in l:
         if l.count(a)>1:
             l1.append(a)
-            for b in l1:
-                if l1.count(b)>1:
-                    l1.remove(b)
+            if l1.count(a)>1:
+                 l1.remove(a)
     for a in l:
         if l.count(a)==1:
             for c in l:
-                if c not in l1:
+                if c not in l1 and c not in l2:
                     l2.append(c)
     print("The duplicate elements are ",l1)
     print("The unique elements are ",l2)
